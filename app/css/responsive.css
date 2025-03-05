@@ -1,0 +1,82 @@
+@media screen and (max-width: 480px) {
+
+    .head {
+        height: 9vh;
+    }
+
+    .container4 {
+        width: 95vw;
+        margin-top: 0.5vh;
+        height: 100vh;
+    }
+
+
+    .container5 {
+        display: none;
+    }
+
+    .font1 {
+        font-size: 30px;
+        margin-top: 2vh;
+        margin-left: 1.5vw;
+    }
+
+    .img1 {
+        width: 5vw;
+
+    }
+
+    .img2 {
+        width: 3vw;
+    }
+
+    .img3 {
+        width: 7vw;
+    }
+
+    .search-btn {
+        margin-top: 2.3vh;
+        margin-right: 9vw;
+    }
+
+    .search-box.active #search-text {
+        margin-top: 2.5vh;
+        margin-right: 9vw;;
+
+    }
+
+    .menu-button {
+        margin-top: 2.5vh
+    }
+
+    .menu-box {
+        margin-top: 3vh;
+        margin-right: 1.5vw;
+        display: none;
+        width: 55vw;
+        height: 40vh;
+        border-radius: 10px;
+        background-color: #f0f0f0;
+    }
+
+    #menu-back {
+        margin-left: 48.5vw;
+        width: 2vw;
+        height: 2.2vh;
+    }
+
+    .menu-profile {
+        margin-bottom: 7.5vh;
+    }
+
+    .menu-feature {
+        text-align: left;
+        padding-top: 0.5vh;
+        padding-left: 1vw;
+        font-size: 15.5px;
+        width: 100%;
+        font-family: 'kanit', sans-serif;
+        height:30px;
+        border-top: #2e2e2e 1px solid;
+    }
+}

@@ -1,0 +1,431 @@
+body {
+    line-height: 0.5;
+    background-color: #2e2e2e;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    filter: invert(50%);
+}
+
+input {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    border: 1px solid rgb(81, 81, 81);
+    padding-left: 14px;
+
+}
+
+button {
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+}
+
+
+
+.head {
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: fixed;
+    display: flex;
+    background-color: #F8DC52;
+    font-size: 50px;
+    width: 100%;
+    height: 12vh;
+}
+
+
+.head2 {
+    margin-top: 12vh;
+    margin-left: 5vw;
+    width: 90vw;
+    height: 90vh;
+    border-radius: 5px;
+
+    position: fixed;
+    background-color: #2e2e2e
+}
+
+/* กล่องเล็ก*/
+.container {
+    display: flex;
+    position: relative;
+    height: auto;
+    width: auto;
+}
+
+.container2 {
+    display: flex;
+    position: absolute;
+    right: 5vw
+}
+
+.container3 {
+    display: flex;
+    gap: 5px;
+    position: absolute;
+    right: 20px;
+}
+
+.container4 {
+    margin-left: 1vw;
+    margin-top: 3vh;
+    position: fixed;
+    border-radius: 10px;
+    height: 94vh;
+    width: 88vw;
+    background-color: rgb(74, 236, 4);
+    overflow-y: auto;
+}
+
+.container6 {
+    display: flex;
+    margin-top: 1vh;
+}
+
+.line {
+    width: 85%;
+    height: 3px;
+    background-color: rgb(0, 0, 0);
+    margin-top: 2vh;
+    margin-left: 4vw;
+}
+
+/*รูป*/
+
+.img1 {
+    margin-left: auto;
+    width: 1.8vw;
+    height: auto;
+}
+
+.img2 {
+    width: 1.5vw;
+    height: auto;
+}
+
+.img3 {
+    width: 2.2vw;
+    height: auto;
+}
+
+.img4 {
+    width: 1vw;
+    height: auto;
+}
+
+/*ข้อความ*/
+.font1 {
+    color: #2e2e2e;
+    margin-top: 1.5vh;
+    margin-bottom: 0;
+    margin-left: 1vw;
+    font-size: 50px;
+    font-family: 'kanit';
+}
+
+/*ช่องค้นหา*/
+
+.search-btn {
+    margin-top: 2.8vh;
+    display: block;
+    margin-left: 1vw;
+}
+
+.search-btn.active {
+    margin-top: 3vh;
+    display: none;
+}
+
+.search-box {
+    display: flex;
+    gap: 0.3vw;
+    align-items: center;
+}
+
+#search-text {
+    display: none;
+    font-size: 10px;
+    margin-top: 2vh;
+    border-color: rgb(196, 196, 196);
+    height: 3.5vh;
+    border-radius: 10px;
+    width: 100%;
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+#search-back {
+    display: none;
+}
+
+.search-box.active #search-text {
+    display: block;
+    font-size: 8px;
+    margin-top: 2.5vh;
+    border-color: rgb(196, 196, 196);
+    height: 4vh;
+    border-radius: 15px;
+    width: 18vw;
+    transition: width 0.3s ease, opacity 0.3s ease;
+}
+
+.search-box.active #search-back {
+    display: block;
+    margin-left: 1vw;
+    margin-top: 3vh;
+}
+
+/*เมนู 3 ขีด*/
+.menu-box {
+    padding-top: 0vh;
+    margin-top: 3vh;
+    margin-right: 1.5vw;
+    display: none;
+    width: 20vw;
+    height: 50vh;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+}
+
+.menu-box.active {
+    display: block;
+    transition: display 0.5s ease;
+}
+
+.menu-button {
+    padding-top: 0;
+    padding-bottom: 0px;
+    margin-top: 3vh
+}
+
+.menu-button.active {
+    display: none;
+}
+
+.menu-feature {
+    text-align: left;
+    padding-top: 0.5vh;
+    padding-left: 1vw;
+    font-size: 15.5px;
+    width: 100%;
+    font-family: 'kanit', sans-serif;
+    height: 30px;
+    border-top: #2e2e2e 1px solid;
+}
+
+#menu-back {
+    margin-left: 17.5vw;
+    width: 2vw;
+    height: 2.2vh;
+}
+
+.menu-profile {
+    display: flex;
+    margin-bottom: 11vh;
+}
+
+.caption {
+    margin-top: 25px;
+    margin-left: 11px;
+    font-size: 14px;
+}
+
+/*ประเภท*/
+.kind p {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-family: 'itim', cursive;
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 25px;
+}
+
+.block_kind {
+    margin-left: 5vw;
+    display: flex;
+    position: fixed;
+    width: 72vw;
+    height: 5.5vh;
+    background-color: #2e2e2e;
+    overflow-x: auto;
+    white-space: nowrap;
+    overflow-y: hidden;
+    border-radius: 20px;
+}
+
+.block_kind .kind-list .kind {
+    margin-left: 1.4vw;
+    margin-top: 0.5vh;
+    width: 10vw;
+    height: 4vh;
+    background-color: #f0f0f0;
+    border-radius: 15px;
+}
+
+#kind1 {
+    margin-left: 0;
+}
+
+.block_kind .kind-list {
+    display: flex;
+    width: 100vw;
+}
+
+.app-box {
+    background-color: rgb(255, 255, 255);
+    margin-left: 83.5vw;
+    margin-top: 1vw;
+    height: 10vh;
+    width: 10vw;
+    position: absolute;
+    z-index: 1000;
+    border-radius: 20px;
+    display: none;
+    border: 3px solid rgb(62, 62, 62);
+}
+
+.app-box.active {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.app-button.active {
+    display: none;
+}
+
+.app-back {
+    display: none;
+    margin-left: 10px;
+}
+
+.app-back.active {
+    display: block;
+    margin-top: 5px;
+}
+
+#scrollLeft {
+    margin-left: 2vw;
+    margin-top: 1vh
+}
+
+#scrollRight {
+    margin-left: 75vw;
+    margin-top: 1vh;
+}
+
+/* ห้องกิจกรรม */
+.scroll-container {
+    background-color: aliceblue;
+    height: 105vh;
+    padding: 10px
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.room {
+    margin-left: 6vw;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.room img {
+    border-radius: 10px 10px 0 0;
+    width: 15vw;
+    height: auto;
+    margin-bottom: 0;
+}
+
+.room div {
+    margin-bottom: 5vh;
+    border: #be0000 1px;
+    border-radius: 10px;
+    background-color: #F8DC52;
+    width: fit-content;
+}
+
+.room h4 {
+    margin-top: 1.5vh;
+    margin-bottom: 0;
+
+}
+
+.room p {
+    text-align: left;
+    margin-left: 1vw;
+    margin-top: 2.5vh;
+    font-size: 12px;
+}
+
+
+
+/*detail*/
+
+
+.detail h2{
+    background-color: #F8DC52;
+    height: 6vh;
+    padding-top: 3.5vh;
+    text-align: center;
+
+}
+
+.detail .c1{
+    display: flex;
+    margin-left: 2vw;
+    border-radius: 10px;
+
+}
+.detail img{
+    margin-left: 10vw;
+    border-radius: 10px;
+    width: 30vw;
+    height: auto;
+
+}
+
+.detail .c2{
+     margin-top: 4vh;
+    background-color: #f0f0f0;
+    margin-left: 4vw;
+    border-radius: 10px;
+    padding-left: 2vw;
+    padding-top: 2vh;
+    padding-right: 2vw;
+}
+
+#enter1{
+   background-color: #cba10a;
+   margin-left: 10vw;
+   border-radius: 10px;
+   padding-left: 2vw;
+   padding-top: 2vh;
+   padding-right: 2vw;
+   width: 30vw;
+   text-align: center;
+   font-size: 40px;
+}
+
+.roombtn{
+    padding-left: 10px;
+    padding-bottom: 10vh;
+    display: flex;
+}
+
+h3{ 
+   font-size: 20px;
+   color: #f0f0f0;
+}
+
+
+.img5 {
+    margin-top: 1.8vh ;
+    width: 1.5vw;
+    height: auto;
+}

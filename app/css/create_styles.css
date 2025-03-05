@@ -1,0 +1,137 @@
+/* รีเซ็ตค่าเริ่มต้นของทุกองค์ประกอบ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ตั้งค่าพื้นหลัง และแบบตัวอักษร */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #181818;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 20px;
+}
+
+/* ส่วน Header */
+#header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+#location, #friends-count {
+  font-size: 18px;
+  color: #555;
+  font-weight: bold;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ช่องกรอกชื่อห้อง */
+#room-name-container {
+  margin-top: 20px;
+}
+
+#room-name {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ช่องอัปโหลดรูปภาพ */
+#image-upload-container {
+  margin-top: 20px;
+  display: flex; /* ใช้ flex เพื่อให้ label และ input อยู่ในบรรทัดเดียวกัน */
+  align-items: center; /* จัดให้อยู่ในแนวเดียวกัน */
+  gap: 10px; /* ระยะห่างระหว่าง label และ input */
+}
+
+#image-upload-container label {
+  margin-bottom: 0; /* ลบระยะห่างที่เกิดขึ้นจาก label */
+  font-size: 16px;
+  color: white;
+}
+
+#image-upload {
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* ส่วนกำหนดจำนวนสมาชิก, เพศ และหมวดหมู่ */
+#options-container {
+  display: flex; /* จัดให้อยู่บรรทัดเดียวกัน */
+  align-items: center; /* จัดให้อยู่กึ่งกลาง */
+  gap: 20px; /* ระยะห่างระหว่างแต่ละกลุ่ม */
+  flex-wrap: wrap; /* ป้องกันการล้นหน้าจอ */
+  margin-top: 20px;
+}
+
+/* ตั้งค่ากล่องข้อมูลแต่ละอัน */
+#member-count-container, 
+#gender-container, 
+#category-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input[type="number"], select {
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  color: white;
+  font-size: 16px;
+}
+
+/* พื้นที่สำหรับพิมพ์ข้อมูลเพิ่มเติม */
+#additional-info-container {
+  margin-top: 20px;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  resize: vertical; /* ให้สามารถขยายพื้นที่ได้แนวตั้ง */
+}
+
+/* ปุ่มยืนยัน */
+#submit-container {
+  margin-top: 20px; /* ระยะห่างจากข้อมูลเพิ่มเติม */
+  display: flex;
+  justify-content: center; /* จัดให้อยู่กึ่งกลาง */
+}
+
+#submit-btn {
+  background-color: #28a745; /* สีเขียว */
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การตั้งค่า - Tamajai</title>
+    <link rel="stylesheet" href="./css/setting.css">
+</head>
+<body>
+    <div class="settings-container">
+        <!-- Sidebar เมนู -->
+        <div class="sidebar">
+            <h2>การตั้งค่า</h2>
+            <ul>
+                <li class="active" onclick="changeSection('account')">บัญชีของคุณ</li>
+                <li onclick="changeSection('security')">ความปลอดภัย</li>
+                <li onclick="changeSection('privacy')">ความเป็นส่วนตัว</li>
+                <li onclick="changeSection('notifications')">การแจ้งเตือน</li>
+                <li onclick="changeSection('feedback')">การรายงานหรือเสนอความเห็น</li>
+            </ul>
+        </div>
+
+        <!-- Content หลัก -->
+        <div class="content">
+            <div id="account" class="section">
+                <h2>บัญชีของคุณ</h2>
+                <p>อีเมล: <span id="email">user@example.com</span></p>
+                <button onclick="openPopup()">แก้ไขอีเมล</button>
+            </div>
+
+            <div id="security" class="section" style="display: none;">
+                <h2>ความปลอดภัย</h2>
+                <p>ตั้งค่าความปลอดภัยของบัญชีคุณที่นี่ เช่น การตั้งรหัสผ่านใหม่หรือการเปิดใช้งานการยืนยันตัวตนสองขั้นตอน</p>
+            </div>
+
+            <div id="privacy" class="section" style="display: none;">
+                <h2>ความเป็นส่วนตัว</h2>
+                <p>จัดการการตั้งค่าความเป็นส่วนตัวของคุณ เช่น การควบคุมข้อมูลที่แสดงในโปรไฟล์ของคุณ</p>
+            </div>
+
+            <div id="notifications" class="section" style="display: none;">
+                <h2>การแจ้งเตือน</h2>
+                <p>เปิด/ปิดการแจ้งเตือนต่างๆ ที่คุณต้องการ เช่น:</p>
+                <label>
+                    <input type="checkbox" id="groupMessageNotifications" checked>
+                    การส่งข้อความภายในกลุ่ม
+                </label><br>
+                <label>
+                    <input type="checkbox" id="createRoomNotifications" checked>
+                    การสร้างห้องจากคนที่สนใจ
+                </label>
+            </div>
+
+            <div id="feedback" class="section" style="display: none;">
+                <h2>การรายงานหรือเสนอความเห็น</h2>
+                <textarea id="feedbackText" rows="5" placeholder="พิมพ์ข้อเสนอแนะหรือรายงานของคุณที่นี่..."></textarea><br>
+                <button onclick="submitFeedback()">ส่งข้อเสนอแนะ</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pop-up Window -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <h3>แก้ไขอีเมล</h3>
+            <input type="email" id="newEmail" placeholder="ป้อนอีเมลใหม่">
+            <div class="popup-buttons">
+                <button onclick="saveEmail()">บันทึก</button>
+                <button onclick="closePopup()">ยกเลิก</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/settingscript.js"></script>
+</body>
+</html>

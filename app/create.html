@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create</title>
+    <link rel="stylesheet" href="./css/create_styles.css">
+</head>
+<body>
+
+    <!-- ส่วน Header แสดงตำแหน่งและจำนวนเพื่อน -->
+    <div id="header">
+        <p id="location">กำลังดึงข้อมูลตำแหน่ง...</p>
+        <p id="friends-count">เพื่อน: 0 คน</p>
+    </div>
+
+    <!-- ช่องกรอกชื่อห้อง -->
+    <div id="room-name-container">
+        <input type="text" id="room-name" placeholder="กรุณากรอกชื่อห้อง">
+    </div>
+
+    <!-- ช่องอัปโหลดรูปภาพ -->
+    <div id="image-upload-container">
+        <label for="image-upload">อัปโหลดรูปภาพห้อง:</label>
+        <input type="file" id="image-upload" accept="image/*">
+    </div>
+    
+    <!-- ส่วนกำหนดจำนวนสมาชิก, เพศ และหมวดหมู่ให้อยู่บรรทัดเดียวกัน -->
+    <div id="options-container">
+        
+        <!-- กำหนดจำนวนสมาชิก -->
+        <div id="member-count-container">
+            <label for="member-count">จำนวนสมาชิก:</label>
+            <input type="number" id="member-count" min="3" value="3" max="99">
+        </div>
+
+        <!-- เลือกเพศ (หลายตัวเลือก) -->
+        <div id="gender-container">
+            <label>เพศ:</label>
+            <input type="checkbox" id="gender" value="male"><label for="male">ชาย</label>
+            <input type="checkbox" id="gender" value="female"><label for="female">หญิง</label>
+            <input type="checkbox" id="gender" value="other"><label for="other">อื่น ๆ</label>
+        </div>
+
+        <!-- เลือกหมวดหมู่ -->
+        <div id="category-container">
+            <label for="category">หมวดหมู่:</label>
+            <select id="category">
+                <option value="sports">กีฬา</option>
+                <option value="gaming">เกม</option>
+                <option value="study">เรียน</option>
+                <option value="travel">ท่องเที่ยว</option>
+                <option value="other">อื่น ๆ</option>
+            </select>
+        </div>
+
+    </div>
+
+        <!-- พื้นที่สำหรับพิมพ์ข้อมูลเพิ่มเติม -->
+        <div id="additional-info-container">
+            <textarea id="additional-info" placeholder="กรุณากรอกข้อมูลเพิ่มเติมที่นี่..." rows="10"></textarea>
+        </div>
+
+            <!-- ปุ่มยืนยัน -->
+    <div id="submit-container">
+        <button onclick="uploadImage()">confirm</button>
+    </div>
+
+    <script src="./js/create_script.js"></script>
+    <script src="./js/database.js"></script>
+
+</body>
+</html>
